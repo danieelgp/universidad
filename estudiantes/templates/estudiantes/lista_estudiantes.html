@@ -1,0 +1,20 @@
+{% extends "estudiantes/base.html" %}
+
+{% block content %}
+    <h1>Lista de Estudiantes</h1>
+
+    <ul>
+        {% for estudiante in estudiantes %}
+        <li>
+            <a href="{% url 'estudiantes:detalle_estudiante' estudiante.pk %}">
+            {{ estudiante.nombre }} {{ estudiante.apellido }}
+            </a>
+        </li>
+        {% empty %}
+        <li>No hay estudiantes registrados.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'estudiantes:home' %}">⬅ Volver al inicio</a>
+{% endblock %}
+

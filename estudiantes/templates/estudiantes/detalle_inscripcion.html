@@ -1,0 +1,10 @@
+{% extends "estudiantes/base.html" %}
+
+{% block content %}
+    <h1>Detalle de Inscripción</h1>
+
+    <p><strong>Estudiante:</strong> {{ inscripcion.estudiante.nombre }} {{ inscripcion.estudiante.apellido }}</p>
+    <p><strong>Curso:</strong> {{ inscripcion.curso.nombre }}</p>
+    <p><strong>Fecha:</strong> {{ inscripcion.fecha_inscripcion }}</p>
+    <a href="{% url 'estudiantes:lista_inscripciones' %}">⬅ Volver a la lista de inscripciones</a>
+{% endblock %}

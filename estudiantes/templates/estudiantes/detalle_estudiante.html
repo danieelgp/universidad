@@ -1,0 +1,12 @@
+{% extends "estudiantes/base.html" %}
+
+{% block content %}
+    <h1>Detalle de Estudiante</h1>
+
+    <p><strong>Nombre:</strong> {{ estudiante.nombre }}</p>
+    <p><strong>Apellido:</strong> {{ estudiante.apellido }}</p>
+    <p><strong>Email:</strong> {{ estudiante.email }}</p>
+    <p><strong>Programa:</strong> {{ estudiante.programa }}</p>
+
+    <a href="{% url 'estudiantes:lista_estudiantes' %}">⬅ Volver a la lista</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "estudiantes/base.html" %}
+
+{% block content %}
+    <h1>Detalle del Programa</h1>
+    <h2>{{ programa.nombre }}</h2>
+    <p><strong>Descripción:</strong> {{ programa.descripcion }}</p>
+    <p><strong>Duración:</strong> {{ programa.duracion }}</p>
+    <p><strong>Código:</strong> {{ programa.codigo }}</p>
+
+    <a href="{% url 'estudiantes:lista_programas' %}">⬅ Volver a la lista</a>
+{% endblock %}

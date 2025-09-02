@@ -1,0 +1,44 @@
+{% extends "estudiantes/base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+    <div class="row g-3">
+        <div class="col-md-6 col-lg-3">
+        <a class="text-decoration-none" href="{% url 'estudiantes:lista_programas' %}">
+            <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title mb-0">Programas</h5>
+            </div>
+            </div>
+        </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+        <a class="text-decoration-none" href="{% url 'estudiantes:lista_cursos' %}">
+            <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title mb-0">Cursos</h5>
+            </div>
+            </div>
+        </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+        <a class="text-decoration-none" href="{% url 'estudiantes:lista_estudiantes' %}">
+            <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title mb-0">Estudiantes</h5>
+            </div>
+            </div>
+        </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+        <a class="text-decoration-none" href="{% url 'estudiantes:lista_inscripciones' %}">
+            <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title mb-0">Inscripciones</h5>
+            </div>
+            </div>
+        </a>
+        </div>
+    </div>
+    {% endblock %}

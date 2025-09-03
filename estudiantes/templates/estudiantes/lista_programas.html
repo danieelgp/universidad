@@ -1,17 +1,21 @@
 {% extends "estudiantes/base.html" %}
 
 {% block content %}
-    <h1>Lista de Programas</h1>
-    <ul>
-        {% for programa in programas %}
-        <li>
-            <a href="{% url 'estudiantes:detalle_programa' programa.pk %}">
-            {{ programa.nombre }}
-            </a>
-        </li>
-        {% empty %}
-        <li>No hay programas registrados aún.</li>
-        {% endfor %}
-    </ul>
-    <a href="{% url 'estudiantes:home' %}">⬅ Volver al inicio</a>
+    <h1>Listado de Programas</h1>
+
+    {% if programas %}
+        <ol>
+            {% for programa in programas %}
+                <li>
+                    <a href="{% url 'estudiantes:detalle_programa' programa.pk %}">
+                        {{ programa.nombre|capfirst }}
+                    </a> - Duración: {{ programa.duracion }}
+                </li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <p>No hay programas registrados aún.</p>
+    {% endif %}
+
+    <p><a href="{% url 'estudiantes:home' %}">Volver al inicio</a></p>
 {% endblock %}

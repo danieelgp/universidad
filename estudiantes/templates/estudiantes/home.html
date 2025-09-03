@@ -3,42 +3,26 @@
 {% block title %}Inicio{% endblock %}
 
 {% block content %}
-    <div class="row g-3">
-        <div class="col-md-6 col-lg-3">
-        <a class="text-decoration-none" href="{% url 'estudiantes:lista_programas' %}">
-            <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title mb-0">Programas</h5>
-            </div>
-            </div>
+    <h1 class="text-center">Bienvenido al Sistema de la Universidad</h1>
+    <p class="text-center">Selecciona una opción para continuar:</p>
+
+    <div class="d-flex flex-column align-items-center gap-3 mt-4">
+
+        <a href="{% url 'estudiantes:lista_programas' %}" class="btn btn-light w-40">
+            Ver Programas
         </a>
-        </div>
-        <div class="col-md-6 col-lg-3">
-        <a class="text-decoration-none" href="{% url 'estudiantes:lista_cursos' %}">
-            <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title mb-0">Cursos</h5>
-            </div>
-            </div>
+
+        <a href="{% url 'estudiantes:lista_cursos' %}" class="btn btn-light w-40">
+            Ver Cursos
         </a>
-        </div>
-        <div class="col-md-6 col-lg-3">
-        <a class="text-decoration-none" href="{% url 'estudiantes:lista_estudiantes' %}">
-            <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title mb-0">Estudiantes</h5>
-            </div>
-            </div>
+
+        <a href="{% url 'estudiantes:lista_estudiantes' %}" class="btn btn-light w-40">
+            Ver Estudiantes
         </a>
-        </div>
-        <div class="col-md-6 col-lg-3">
-        <a class="text-decoration-none" href="{% url 'estudiantes:lista_inscripciones' %}">
-            <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title mb-0">Inscripciones</h5>
-            </div>
-            </div>
+
+        <a href="{% url 'estudiantes:lista_inscripciones' %}" class="btn btn-light w-40">
+            Ver Inscripciones
         </a>
-        </div>
+
     </div>
-    {% endblock %}
+{% endblock %}

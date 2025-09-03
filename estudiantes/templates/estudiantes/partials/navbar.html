@@ -1,26 +1,26 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
-    <div class="container">
-        <a class="navbar-brand fw-semibold" href="{% url 'estudiantes:home' %}">Universidad</a>
+<nav class="navbar navbar-light bg-light border-bottom">
+  <div class="container d-flex justify-content-between align-items-center">
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <ul class="navbar-nav d-flex flex-row gap-5 mb-0">
+      <li class="nav-item">
+        <a class="nav-link text-dark p-0" href="{% url 'estudiantes:lista_programas' %}">Programas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark p-0" href="{% url 'estudiantes:lista_cursos' %}">Cursos</a>
+      </li>
+    </ul>
 
-        <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-            <a class="nav-link" href="{% url 'estudiantes:lista_programas' %}">Programas</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="{% url 'estudiantes:lista_cursos' %}">Cursos</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="{% url 'estudiantes:lista_estudiantes' %}">Estudiantes</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="{% url 'estudiantes:lista_inscripciones' %}">Inscripciones</a>
-            </li>
-        </ul>
-        </div>
-    </div>
-    </nav>
+    <a class="navbar-brand mx-auto fw-bold" href="{% url 'estudiantes:home' %}">Universidad</a>
+
+    <ul class="navbar-nav d-flex flex-row gap-5 mb-0">
+      <li class="nav-item">
+        <a class="nav-link text-dark p-0" href="{% url 'estudiantes:lista_estudiantes' %}">Estudiantes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark p-0" href="{% url 'estudiantes:lista_inscripciones' %}">Inscripciones</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+

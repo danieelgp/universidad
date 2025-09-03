@@ -1,19 +1,21 @@
 {% extends "estudiantes/base.html" %}
 
 {% block content %}
-    <h1>Lista de Cursos</h1>
+  <h1>Listado de Cursos</h1>
 
+  {% if cursos %}
     <ul>
-        {% for curso in cursos %}
+      {% for curso in cursos %}
         <li>
-            <a href="{% url 'estudiantes:detalle_curso' curso.pk %}">
-            {{ curso.nombre }}
-            </a> - {{ curso.creditos }} créditos
+          <a href="{% url 'estudiantes:detalle_curso' curso.pk %}">
+            {{ curso.nombre|upper }}
+          </a> - {{ curso.creditos }} créditos
         </li>
-        {% empty %}
-        <li>No hay cursos registrados.</li>
-        {% endfor %}
+      {% endfor %}
     </ul>
+  {% else %}
+    <p>No hay cursos registrados.</p>
+  {% endif %}
 
-    <a href="{% url 'estudiantes:home' %}">⬅ Volver al inicio</a>
+  <p><a href="{% url 'estudiantes:home' %}">Volver al inicio</a></p>
 {% endblock %}
